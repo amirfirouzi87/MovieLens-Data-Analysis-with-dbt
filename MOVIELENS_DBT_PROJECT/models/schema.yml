@@ -1,0 +1,26 @@
+version: 2
+
+models:
+  - name: src_movies
+    columns:
+      - name: movie_id
+        tests:
+          - unique
+          - not_null
+      - name: title
+        tests:
+          - not_null
+
+  - name: fct_ratings
+    columns:
+      - name: movie_id
+        tests:
+          - relationships:
+              to: ref('dim_movies')
+              field: movie_id   
+              
+  - name: dim_movies
+    columns:
+      - name: release_year
+        tests:
+          - not_null

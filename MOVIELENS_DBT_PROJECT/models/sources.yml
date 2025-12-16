@@ -1,0 +1,12 @@
+version: 2
+
+sources:
+  - name: MOVIELENS
+    schema: RAW
+    tables:
+      - name: RAW_GENOME_SCORES
+      - name: RAW_GENOME_TAGS
+      - name: RAW_LINKS
+      - name: RAW_MOVIES
+      - name: RAW_RATINGS
+      - name: RAW_TAGS

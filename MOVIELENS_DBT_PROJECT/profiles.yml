@@ -1,0 +1,9 @@
+MOVIELENS_DBT_PROJECT:
+  target: dev
+  outputs:
+    dev:
+      type: snowflake
+      role: TRANSFORM
+      warehouse: COMPUTE_WH
+      database: MOVIELENS
+      schema: DEV

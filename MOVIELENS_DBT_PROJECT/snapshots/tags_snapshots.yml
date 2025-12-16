@@ -1,0 +1,10 @@
+snapshots:
+  - name: tags_snapshot
+    relation: ref('src_tags')
+    config:
+      schema: snapshots
+      database: MOVIELENS
+      unique_key: ['user_id','movie_id',"tag"]
+      strategy: timestamp
+      updated_at: tag_timestamp
+      hard_deletes: invalidate 
